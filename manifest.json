@@ -1,0 +1,21 @@
+{
+    "name": "Display inline",
+    "description": "Change the response content type and disposition to force images and pdf documents to open in the browser window",
+    "version": "0.2",
+    "manifest_version": 2,
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "permissions": [
+        "<all_urls>",
+        "webRequest",
+        "webRequestBlocking"
+    ],
+    "applications": {
+        "gecko": {
+            "id": "displayinline@samlh.net"
+        }
+    }
+}
