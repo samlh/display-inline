@@ -14,7 +14,9 @@ function guessContentType(fileName) {
     }[fileName.split('.').pop()];
 }
 function isBlacklistedContentType(contentType) {
-    return /^application\/octet-?stream$/i.test(contentType);
+    return /^application\/octet-?stream$/i.test(contentType)
+        || /^binary\/octet-?stream$/i.test(contentType)
+        || /^application\/x?-?download$/i.test(contentType);
 }
 browser.webRequest.onHeadersReceived.addListener(
     function (request) {
