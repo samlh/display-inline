@@ -11,6 +11,7 @@ function guessContentType(fileName) {
         patch: "text/plain",
         torrent: "text/plain",
         mp3: "audio/mpeg",
+        json: "application/json"
     }[fileName.split('.').pop()];
 }
 function isBlacklistedContentType(contentType) {
